@@ -1,0 +1,51 @@
+'"The best way to predict the future is to invent it." — Alan Kay
+
+'"Programs must be written for people to read, and only incidentally for machines to execute." — Harold Abelson'
+
+'"Any sufficiently advanced technology is indistinguishable from magic." — Arthur C. Clarke'
+
+'"First, solve the problem. Then, write the code." — John Johnson'
+
+'"Simplicity is the soul of efficiency." — Austin Freeman'
+
+'"In the beginner’s mind there are many possibilities, in the expert’s mind there are few." — Shunryu Suzuki'
+
+'"Talk is cheap. Show me the code." — Linus Torvalds'
+
+'"The art challenges the technology, and the technology inspires the art." — John Lasseter'
+
+'"Imagination is more important than knowledge." — Albert Einstein'
+
+'"We shape our tools, and thereafter our tools shape us." — Marshall McLuhan'
+
+'"Do not go where the path may lead, go instead where there is no path and leave a trail." — Ralph Waldo Emerson'
+
+'"Every act of creation is first an act of destruction." — Pablo Picasso'
+
+'"The computer was born to solve problems that did not exist before." — Bill Gates'
+
+'"Stay hungry, stay foolish." — Steve Jobs'
+
+'"Technology is best when it brings people together." — Matt Mullenweg'
+
+'"A person who never made a mistake never tried anything new." — Albert Einstein'
+
+'"Creativity is intelligence having fun." — Albert Einstein'
+
+'"The medium is the message." — Marshall McLuhan'
+
+'"Not everything that can be counted counts, and not everything that counts can be counted." — William Bruce Cameron'
+
+'"All models are wrong, but some are useful." — George Box'
+
+'"The web does not just connect machines, it connects people." — Tim Berners-Lee'
+
+'"To invent, you need a good imagination and a pile of junk." — Thomas Edison'
+
+'"The future is already here — it’s just not evenly distributed." — William Gibson'
+
+'"You can’t use up creativity. The more you use, the more you have." — Maya Angelou'
+
+'"Art is never finished, only abandoned." — Leonardo da Vinci'
+
+'"The limits of my language mean the limits of my world." — Ludwig Wittgenstein'
