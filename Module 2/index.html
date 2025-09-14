@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 
+        Elemenents are selected using different selector types;
+        - Class selector (e.g. .box) - Selects all elements of a given class
+        - ID Selector (e.g. #bold) - Selects an item with the given ID
+        - Element Selector (e.g. p) - Selects all items of the given element.
+
+        border adds a border around the given element
+        color changes the color of the given element
+        font-weight changes the weight of the text. The available weights depend on the font-family being used.z
+    -->
+    <style>
+        .box {
+            border: solid black 4px;
+        }
+
+        .text {
+            color: blue;
+        }
+
+        #bold {
+            font-weight: bold;
+        }
+
+        p:hover {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        The class attribute in the div here identifies this div as a box. This class identifier can be used in JavaScript to modify or read its contents,
+        or in css to style a given set of elements with a given class/id
+    -->
+    <div class="box">
+        <h4>Learn More</h4>
+        <!-- 
+            Links (<a>) can be placed both as separate elements and within text (<p>) elements.
+
+            A link needs a href (Hypertext Reference) to tell the browser where to go when clicked.
+
+            The target attribute (target="") can take the following parameters:
+            - _self - The default value here. Opens the link in the same tab you're currently in.
+            - _blank - Opens the link in a new tab
+            - _parent - Opens the link in the parent frame 
+            - _top - Opens the link in the full body of the window
+
+            _parent and _top are only required in a situation where you have a website within a website (also known as iFrame).
+
+            rel="Noopener noreferrer" tells the browser to not provide the referrer page to the page being opened
+        -->
+        <p class="text">To learn more, visit <a href="https://learn.dombesteindata.net" target="_blank" rel="noopener noreferrer">this page</a> </p>
+    </div>
+
+    <!--
+        The ID attribute here functions just like the class attribute, but ID is more specific and should only be used on one element per ID. 
+
+        Tip: In styling a page, specificity will automatically apply the specific style for an ID if an element has the same style 
+        being applied by both a class selector and id selector.
+    -->
+    <p class="text" id="bold">This should be separate from the content above.</p>
+    
+    <!--
+        You can add videos to your page,
+        these can, just as images, be imported from a local file (as below), or from a website.
+        Remember to add "controls" to the video element to be able to play the video
+
+        type="video/mp4" defines what video type this is, remember to change this to the correct format of your video (mp4/ogg/gif/etc)
+    -->
+    <video controls>
+        <source src="/Module 2/video.mp4" type="video/mp4">
+    </video>
+</body>
+</html>

@@ -1,0 +1,80 @@
+.contact-form {
+	/*
+		max-width: The maximum width of the element
+		margin: define how much space you want around the outside of an element
+		padding: define how much space you want from the edge of the element to the items within it
+		border: define a border around the selected element(s). this border is 1px thick, is solid and has the color value of #ddd. 
+		border-radius: define a radius on the border, the higher this value is, the more rounded the border will be.
+		background-color: set the background color of the element
+	*/
+	max-width: 500px;
+	margin: 40px auto;
+	padding: 20px;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	background-color: #fafafa;
+}
+
+/*
+	You can select a specific element type within a class by providing the class name, then the element.
+	This allows you to apply more specific styling to that one type of element
+*/
+.contact-form h2 {
+	/*
+		text-align: Align the text to the left, center or right
+		margin-bottom: Only define a required margin along the bottom of the element. Useful for stuff like headers.
+	*/
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.form-group {
+	margin-bottom: 15px;
+}
+
+.form-group label {
+	/*
+		display: defines how an element is displayed on the page. The element below is displayed as a block.
+		font-weight: change the weight of the current font. The weights you can use here depends on the available weights in the font used.
+	*/
+	display: block;
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+/*
+	You can also specify multiple types of elements by separating them with a comma.
+	You still have to specify the class first, then the element.
+*/
+.form-group input,
+.form-group textarea {
+	/*
+		width: set the width of the element
+		box-sizing: includes the padding and border of the element in its total width and height. This allows us to actually have a predictable sizing on
+		our layout.
+	*/
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+.contact-form button {
+	width: 100%;
+	padding: 12px;
+	border: none;
+	border-radius: 4px;
+	background-color: #007bff;
+	color: white;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+/*
+	We can also define what happens when we hover over an item by using :hover. This tells the browser
+	to only apply the given styling when the mouse cursor is hovering over the element.
+*/
+.contact-form button:hover {
+	background-color: #0056b3;
+}

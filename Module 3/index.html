@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--
+        Linking an external stylesheet. Please note the href here instead of src used in e.g. image tags.
+    -->
+    <link rel="stylesheet" href="/Module 3/index.css" />
+</head>
+<body>
+    <!--
+        The Form element is a container element (similar to div) that houses a input form. 
+    -->
+    <form class="contact-form">
+        <h2>Contact Us</h2>
+
+        <div class="form-group">
+            <!--
+                A label is the text being displayed above any sort of input field in a form. 
+                The for attribute defines which text field this label is for. The value here should match the ID of the input field.
+            -->
+            <label for="name">Name:</label>
+
+            <!--
+                An input field is any field you want to enter data into.
+                - The type attribute specifies what type this input field is. You can choose between text, password (will censor the input) or number.
+                - The name attribute is mainly used as an identifier server-side to process the data.
+                - The placeholder attribute displays the provided text when there is nothing entered in the input field. 
+                - The required attribute tells the browser to not allow the form to be submitted before anything has been entered into the field
+            -->
+            <input
+                type="text"
+                id="name"
+                name="user_name"
+                placeholder="Enter your full name"
+                required
+            />
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input
+                type="email"
+                id="email"
+                name="user_email"
+                placeholder="you@example.com"
+                required
+            />
+        </div>
+
+        <div class="form-group">
+            <label for="message">Message:</label>
+
+            <!--
+                A textarea is similar to a input field, the key difference is that it doesn't have a specified type,
+                but instead takes a row attribute which defines the default size for the area. 
+
+                The textarea can be resized on the user's side by clicking and dragging the resize-handle in the bottom-right
+                of the area while on the website. Once the page is refreshed, the area will go back to it's default size.
+            -->
+            <textarea
+                id="message"
+                name="user_message"
+                rows="5"
+                placeholder="Enter your message here"
+                required
+            ></textarea>
+        </div>
+
+        <!-- 
+            A button with the type submit will by default refresh the page when clicked, if hooked up to a function in JavaScript,
+            that code will also be executed. We can also disable this refresh behavior in JavaScript.
+        -->
+        <button id="submit" type="submit">Send Message</button>
+    </form>
+
+    <!--
+        Script tags let us write JavaScript in a HTML file, or load an external JavaScript file using src="pathToJSFile.js" within the first script tag.
+
+        A Script tag should always be placed at the bottom of the page to ensure that the script doesn't load before the page content is ready.
+        The reason for this is that in most cases, We will try to fetch and modify HTML-elements in JS,
+        and if those elements aren't ready when the script runs, the page will just load with those elements unmodified.
+
+        We can also use a event listener called DOMContentLoaded which explicitly waits until the DOM (Document Object Model, fancy word for the HTML)
+        is fully loaded before we try to get the elements and update them. This event listener should usually be at the top level of the page
+        if it's needed. 
+    -->
+    <script>
+        /*
+            To get the page elements, we can use either their class- or id-name. 
+            document.getElementById fetches a specific element based on it's ID.
+            We can also fetch a full class by using document.getElementsByClassName.
+            The provided ID or Class Name must match the id or class name given in the HTML document.
+        */
+
+        const submitButton = document.getElementById('submit');
+        const name = document.getElementById('name');
+
+        /*
+            addEventListener adds an event listener to the provided element. Event listeners can be a lot of different things, but 'click' is the 
+            most used one. When the provided element is clicked, we perform the function as defined within the function block.
+
+            In this case we allso pas inn the click event, which describes essentially what just happened. What button was clicked, what clicked it,
+            the position etc etc.
+
+            After defining what type of event we're listening for, and passing any eventual parameters 
+            (the parenteses here can also be left blank like such "()")
+            we define a function block which tells the browser what actions to perform when this button is clicked.
+        */
+        submitButton.addEventListener('click', (event) => {
+
+            /*
+                We call event.preventDefault() to prevent the default behavior of this button, which would be to reload the page
+                the second the button is clicked. This can prevent our code further down from actually being able to get the data it's supposed
+                to fetch and process.
+            */
+            event.preventDefault();
+
+            /*
+                We define a simple variable which can be modified later in the code and fetch the value of the name field
+                which was defined at the top of the script
+            */
+            let userName = name.value;
+
+            /*
+                alert() allows us to display a message on the user's side. This message will pop up either at the top of their browser (chrome)
+                or as a popup window on the middle of the screen (firefox & safari).
+                This message will only contain what's within the (), as well as an OK button in most cases.
+            */
+            alert(userName);
+        })
+    </script>
+</body>
+</html>
